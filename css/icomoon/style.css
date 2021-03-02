@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?j58frp');
+  src:  url('fonts/icomoon.eot?j58frp#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?j58frp') format('truetype'),
+    url('fonts/icomoon.woff?j58frp') format('woff'),
+    url('fonts/icomoon.svg?j58frp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu-burger:before {
+  content: "\e913";
+}
+.icon-logo-letters .path1:before {
+  content: "\e904";
+  color: rgb(242, 43, 178);
+}
+.icon-logo-letters .path2:before {
+  content: "\e905";
+  margin-left: -3.75em;
+  color: rgb(140, 48, 245);
+}
+.icon-logo-letters .path3:before {
+  content: "\e906";
+  margin-left: -3.75em;
+  color: rgb(254, 154, 34);
+}
+.icon-logo-letters .path4:before {
+  content: "\e907";
+  margin-left: -3.75em;
+  color: rgb(46, 197, 206);
+}
+.icon-logo-letters .path5:before {
+  content: "\e908";
+  margin-left: -3.75em;
+  color: rgb(11, 13, 23);
+}
+.icon-logo-letters .path6:before {
+  content: "\e909";
+  margin-left: -3.75em;
+  color: rgb(11, 13, 23);
+}
+.icon-logo-letters .path7:before {
+  content: "\e90a";
+  margin-left: -3.75em;
+  color: rgb(11, 13, 23);
+}
+.icon-logo-letters .path8:before {
+  content: "\e90b";
+  margin-left: -3.75em;
+  color: rgb(11, 13, 23);
+}
+.icon-logo-letters .path9:before {
+  content: "\e90c";
+  margin-left: -3.75em;
+  color: rgb(11, 13, 23);
+}
+.icon-logo-letters .path10:before {
+  content: "\e90d";
+  margin-left: -3.75em;
+  color: rgb(11, 13, 23);
+}
+.icon-logo-letters .path11:before {
+  content: "\e90e";
+  margin-left: -3.75em;
+  color: rgb(11, 13, 23);
+}
+.icon-logo .path1:before {
+  content: "\e90f";
+  color: rgb(242, 43, 178);
+}
+.icon-logo .path2:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(140, 48, 245);
+}
+.icon-logo .path3:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(254, 154, 34);
+}
+.icon-logo .path4:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(46, 197, 206);
+}
+.icon-dribbble:before {
+  content: "\e900";
+}
+.icon-instagram:before {
+  content: "\e901";
+}
+.icon-youtube:before {
+  content: "\e902";
+}
+.icon-twitter:before {
+  content: "\e903";
+}
