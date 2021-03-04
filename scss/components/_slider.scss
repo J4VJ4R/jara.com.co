@@ -1,0 +1,144 @@
+@include breakpoint(xxs-down) {
+  .slider-content {
+    display: flex;
+  }
+
+  .content-slider-one {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .img-box--small {
+    width: 100%;
+  }
+
+}
+
+.container_hidden {
+  overflow: hidden;
+}
+
+.text-box__description--small {
+  font-size: to-rem(18);
+  font-weight: 500;
+  width: 100%;
+
+  @include breakpoint(xs-down) {
+    width: 82%;
+  }
+}
+
+.slider-content {
+  @include breakpoint(xxs-up) {
+    display: none;
+  }
+}
+
+.experience {
+  display: block;
+
+  &__group-one {
+    @include breakpoint(sm-up) {
+      display: flex;
+    }
+  }
+
+  &__group-two {
+    @include breakpoint(sm-up) {
+      display: flex;
+    }
+  }
+
+  @include breakpoint(xxs-down) {
+    display: none;
+  }
+
+  @include breakpoint (md-up) {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+.img-box--padding {
+  padding-bottom: 0.4rem;
+
+  @include breakpoint(sm-up) {
+    padding: 0;
+    width: to-rem(255);
+    height: to-rem(204);
+  }
+}
+
+.text-box--center {
+  @include breakpoint(sm-up) {
+    width: 100%;
+    text-align: center;
+  }
+
+  @include breakpoint(md-up) {
+    width: 50%;
+    text-align: left;
+  }
+}
+
+.text-box__description--big {
+  @include breakpoint(xxs-up) {
+    font-size: to-rem(18);
+  }
+
+  @include breakpoint(sm-up) {
+    width: 50%;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+
+  @include breakpoint(md-up) {
+    width: 200%;
+  }
+}
+
+.text-box--without-padding {
+  padding: 0;
+  text-align: left;
+
+  @include breakpoint(md-down) {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.text-box__description--mobile {
+  @include breakpoint(xs-down) {
+    padding-left: 0;
+    width: 100%;
+    padding-top: .5rem;
+  }
+}
+
+.text-box--padding-on-mobile {
+  @include breakpoint(xs-down) {
+    padding-left: 1rem;
+  }
+}
+
+.text-box__description--tablets {
+  @include breakpoint(xs-down) {
+    width: 100%;
+  }
+}
+
+.text-box--mobile {
+  padding: 1rem;
+}
+
+.text-box__title--on-mobile {
+  @include breakpoint(xs-down) {
+    width: 90%;
+  }
+}
+.banner--responsive{
+  @include breakpoint(md-down){
+    width: 70%;
+  }
+}

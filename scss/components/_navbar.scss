@@ -1,64 +1,103 @@
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   height: to-rem(72);
   align-items: center;
-  &__nav{
-    width: 33.3%;
-    @include breakpoint(xs-down){
-      transition: all 1s ease;
-      width: 0%;
-      padding-top: 7rem;
-    }
-    
+  position: relative;
+  z-index: 400;
+
+  &__nav {
+    width: 25%;
+
   }
-  &__link{
+
+  &__link {
+    font-size: to-rem(14);
+    font-weight: $font__weight--bold;
     color: $color-five;
     text-decoration: none;
   }
-  &__item{
-    @include breakpoint(xs-down){
+
+  &__item {
+    @include breakpoint(xs-down) {
       display: none;
     }
+
     width: 33.3%;
     list-style: none;
   }
-  &__list{
+
+  &__list {
+    align-items: center;
     padding-left: to-rem(13);
     display: flex;
-    @include breakpoint(xxs-down){
-      display: initial;
-    }
+
   }
-  &__logo{
-    width: 33.3%;
+
+  &__logo {
+    width: 50%;
     text-align: center;
-    @include breakpoint(xs-down){
+
+    @include breakpoint(xs-down) {
       width: 50%;
       text-align: left;
     }
   }
 }
-.social-media{
+
+//modifiers of navbar exactly on navbar__link
+.navbar__link--medium {
+  font-size: 28px;
+}
+
+.navbar__item--padding {
+  @include breakpoint(xs-down) {
+    padding-bottom: 2rem;
+  }
+}
+
+.social-media {
   justify-content: flex-end;
   display: flex;
-  width: 33.3%;
-  &__item{
+  width: 25%;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__item {
+    list-style: none;
+    padding-left: to-rem(14);
+  }
+
+  &__icon {
+    color: white;
     padding: 0 to-rem(14);
-    @include breakpoint(xs-down){
+
+    @include breakpoint(xs-down) {
       display: none;
     }
   }
-  
-}
-//menu navbar
-.brand__toggle{
-  width: 50%;
-  padding: 0 2rem;
-  @include breakpoint(sm-up){
-    display: none;
+
+  &__item::before {
+    font-size: to-rem(17);
   }
 }
+
+//menu navbar
+.brand__toggle {
+  width: 50%;
+  padding: 0 2rem;
+
+  @include breakpoint(sm-up) {
+    display: none;
+  }
+
+  @include breakpoint(xxs-down) {
+    width: 10%;
+  }
+}
+
 .brand__menu-on--white {
   display: inline-block;
   width: 30px;
@@ -73,7 +112,7 @@
     display: block;
     position: absolute;
     background: $color-five;
-    transition: all 0.25s ease;
+    // transition: all 0.1s ease;
     /* Propiedades a animar | Tiempo | Tipo animación*/
     transform-origin: 0px 100%;
   }
@@ -94,6 +133,7 @@
 
 .brand__menu-on.active span {
   background-color: $color-trhee;
+
   &:nth-child(1) {
     transform: rotate(45deg);
     top: 1px;
@@ -110,25 +150,101 @@
     left: 2px;
   }
 }
+
 //chnage when there is a click on menu burger
-.header__section--light{
-  @include breakpoint(xs-down){
-    .navbar__nav{
-      margin-top: 4rem;
-      transition: all 1s ease-in-out;
-      width: 100%;
+.header__section--light {
+  @include breakpoint(xs-down) {
+
+    z-index: 900;
+    transition: all .5s ease;
+    height: 1000px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+
+    .brand {
+      .brand__toggle {
+        width: 10%;
+      }
+    }
+
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      height: to-rem(72);
+      align-items: center;
+
+      &__nav {
+        width: 70%;
+
+        @include breakpoint(xs-down) {
+          padding-top: 27rem;
+        }
+      }
+
+      &__link {
+        font-size: to-rem(14);
+        font-weight: $font__weight--bold;
+        color: $color-two;
+        text-decoration: none;
+      }
+
+      &__item {
+        @include breakpoint(xs-down) {
+          width: 100%;
+          text-align: center;
+          display: block;
+          line-height: 3rem;
+        }
+
+        width: 33.3%;
+        list-style: none;
+      }
+
+      &__list {
+        align-items: center;
+        padding-left: to-rem(13);
+
+        @include breakpoint(xs-down) {
+          display: block;
+        }
+      }
+
+      &__logo {
+        width: 33.3%;
+        text-align: center;
+
+        @include breakpoint(xs-down) {
+          width: 20%;
+          text-align: left;
+        }
+
+      }
+    }
+
+    .navbar__link--medium {
+      font-size: to-rem(24);
+    }
+
+    .social-media {
+      width: 0%;
     }
   }
-  @include breakpoint(xs-down){
-    .navbar__item{
-      line-height: 3rem;
-      width: 100%;
-      text-align: center;
-      display: block;
-      transition: all 1s ease-in;
-    }
-    .navbar__logo{
-      text-align: right;
-    }
+}
+
+.brand {
+  @include breakpoint(sm-up) {
+    display: none;
   }
+}
+
+.social-media--on-footer {
+  @include breakpoint(md-up) {
+    display: block;
+  }
+}
+.social-media__icon{
+  background: #f9fafc1c;
+  border-radius: 100%;
+  padding: .5rem;
 }

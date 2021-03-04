@@ -1,0 +1,191 @@
+.banner {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+
+  @include breakpoint(md-down) {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(xs-down) {
+    display: block;
+  }
+
+}
+
+.text-box {
+  font-weight: 400;
+  text-align: center;
+  padding: to-rem(32);
+
+  &__title {
+    @include breakpoint(sm-up) {
+      font-size: to-rem(72);
+    }
+
+    font-weight: $font__weight--bold;
+  }
+
+  &__description {
+    line-height: to-rem(32);
+    font-size: to-rem(14);
+  }
+
+  @include breakpoint(sm-up) {
+    padding: 0;
+    padding-left: 0.8125rem;
+    text-align: left;
+    box-sizing: content-box;
+    width: 45%;
+
+    &__description {
+      line-height: to-rem(32);
+      font-size: to-rem(18);
+    }
+  }
+
+  @include breakpoint(xs-down) {
+    &__description {
+      padding-bottom: 1rem;
+      margin: 0 auto;
+      width: 72%;
+    }
+  }
+}
+
+.button {
+  border: none;
+  border-radius: to-rem(32);
+  margin: 0 auto;
+  text-align: center;
+  background-color: $color-one;
+  padding: to-rem(6) to-rem(13);
+  line-height: to-rem(20);
+
+  &__link {
+    font-size: to-rem(12);
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.button--large {
+  @include breakpoint(md-up) {
+    float: left;
+    align-items: center;
+    display: flex;
+    width: to-rem(196);
+    height: to-rem(62);
+    border-radius: 8px;
+  }
+}
+
+.button__link--large {
+  @include breakpoint(md-up) {
+    width: 100%;
+    font-size: to-rem(20);
+  }
+}
+
+//img on banner about girl with computer
+.bubble-img {
+  z-index: 300;
+  right: -44px;
+  position: relative;
+  width: 50%;
+
+  &__img {
+
+    @include breakpoint(md-down) {
+      width: 76%;
+      height: 54%;
+      padding-top: 6rem;
+    }
+
+    @include breakpoint(xs-down) {
+      display: none;
+    }
+  }
+
+  &:after {
+    left: to-rem(-7.08);
+    z-index: -1;
+    top: to-rem(214);
+    content: "";
+    height: to-rem(72);
+    width: to-rem(72);
+    border-radius: 100%;
+    position: absolute;
+    background-color: $color-trhee-opacity;
+    visibility: visible;
+
+    @include breakpoint(md-down) {
+      top: 62%;
+    }
+
+    @include breakpoint(xs-down) {
+      display: none;
+    }
+  }
+
+  @include breakpoint(xs-down) {
+    display: none;
+  }
+
+  @include breakpoint(md-down) {
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.purple-circle {
+  position: relative;
+  display: contents;
+  width: 50%;
+
+  &__img {
+    width: 750px;
+    position: absolute;
+    top: -20.25rem;
+    right: -16.125rem;
+
+    @include breakpoint(md-down) {
+      display: none;
+    }
+  }
+}
+
+.turquoise-circle {
+  &__img {
+    top: 92%;
+    z-index: 300;
+    position: relative;
+    right: to-rem(-44);
+    right: 14.6rem;
+
+    @include breakpoint(xs-down) {
+      display: none;
+    }
+  }
+}
+
+.container--height {
+  height: to-rem(796);
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(md-down) {
+    height: 38.75rem;
+  }
+  @include breakpoint(xs-down){
+    height: 16.75rem;
+  }
+}
+
+.container-fluid--relative {
+  position: relative;
+}
