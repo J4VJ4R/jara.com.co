@@ -13,6 +13,8 @@
     
   }
   &__link{
+    font-size: to-rem(14);
+    font-weight: $font__weight--bold;
     color: $color-five;
     text-decoration: none;
   }
@@ -26,7 +28,7 @@
   &__list{
     padding-left: to-rem(13);
     display: flex;
-    @include breakpoint(xxs-down){
+    @include breakpoint(xs-down){
       display: initial;
     }
   }
@@ -39,17 +41,24 @@
     }
   }
 }
+//modifiers of navbar exactly on navbar__link
+.navbar__link--medium{
+  font-size: 24px;
+}
 .social-media{
   justify-content: flex-end;
   display: flex;
   width: 33.3%;
   &__item{
+    
     padding: 0 to-rem(14);
     @include breakpoint(xs-down){
       display: none;
     }
   }
-  
+  &__item::before{
+    font-size: to-rem(17);
+  }
 }
 //menu navbar
 .brand__toggle{

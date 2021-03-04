@@ -69,6 +69,8 @@ body {
         width: 0%;
         padding-top: 7rem; } }
   .navbar__link {
+    font-size: 0.875rem;
+    font-weight: 700;
     color: #0B0D17;
     text-decoration: none; }
   .navbar__item {
@@ -80,7 +82,7 @@ body {
   .navbar__list {
     padding-left: 0.8125rem;
     display: flex; }
-    @media (max-width: 576px) {
+    @media (max-width: 767px) {
       .navbar__list {
         display: initial; } }
   .navbar__logo {
@@ -91,6 +93,9 @@ body {
         width: 50%;
         text-align: left; } }
 
+.navbar__link--medium {
+  font-size: 24px; }
+
 .social-media {
   justify-content: flex-end;
   display: flex;
@@ -100,6 +105,8 @@ body {
     @media (max-width: 767px) {
       .social-media__item {
         display: none; } }
+  .social-media__item::before {
+    font-size: 1.0625rem; }
 
 .brand__toggle {
   width: 50%;
