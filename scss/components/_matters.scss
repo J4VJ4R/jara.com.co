@@ -60,6 +60,9 @@
     width: to-rem(255);
     position: relative;
     min-width: to-rem(255);
+    @include breakpoint(md-down){
+      height: 16.9375rem;
+    }
   }
 
   &__number {
@@ -96,4 +99,7 @@
     padding-bottom: 2.5rem;
     justify-content: center;
   }
+}
+.container-purple__description{
+  padding-top: 1rem;
 }

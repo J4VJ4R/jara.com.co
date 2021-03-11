@@ -2,6 +2,12 @@
   width: 100%;
   position: relative;
   padding-bottom: to-rem(64);
+  @include breakpoint(md-down){
+    padding-bottom: 4.5rem;
+  }
+  @include breakpoint(xxs-down){
+    padding-bottom: 4rem;
+  }
 }
 
 .slider {
@@ -16,7 +22,10 @@
   width: 92%;
   display: flex;
   justify-content: center;
-
+  @include breakpoint (md-down){
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
   @include breakpoint(xxs-down) {
     padding-left: 0;
     width: 100%;
@@ -62,7 +71,7 @@
 
 .text-box__title--margins {
   margin-bottom: 0;
-
+  padding-top: to-rem(64);
   @include breakpoint(xs-down) {
     font-size: to-rem(34);
     padding-bottom: 2rem;
@@ -73,6 +82,9 @@
   font-size: to-rem(24);
   text-align: center;
   padding-top: to-rem(40);
+  @include breakpoint(xxs-down){
+    margin-top: 6rem;
+  }
 }
 
 .text-box--small {
@@ -89,7 +101,6 @@
 
 .text-box--small:nth-child(2) {
   padding-right: to-rem(30);
-  background-color: red;
 }
 
 .text-box--hidden-tablet {
@@ -162,6 +173,9 @@
 
 .img-box--padding-slider {
   padding-bottom: 0;
+  @include breakpoint(xxs-down){
+    text-align: center;
+  }
 }
 
 .content-slider--inline {
@@ -183,16 +197,27 @@
 }
 
 .text-box__description--hidden-on-mobile {
-  display: none;
+  @include breakpoint(xxs-down){
+    display: none;
+  }
 }
 
 .text-box__title--on-desktop {
   @include breakpoint(md-up) {
-    width: 50%;
-    padding-left: 1rem;
+    width: 51%;
   }
 }
 
 .text-box--on-desktop {
   width: 100%;
+}
+.text-box--padding-slider{
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.img-box--center{
+  @include breakpoint(xxs-down){
+    // text-align: center;
+  }
 }

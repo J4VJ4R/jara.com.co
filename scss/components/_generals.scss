@@ -1,9 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: 'Manrope';
 }
 
 .container-fluid {
-  overflow: hidden;
   max-width: to-rem(1400);
   width: 100%;
   margin-left: auto;
@@ -11,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: to-rem(1150);
+  max-width: to-rem(1110);
   width: 100%;
   margin-left: auto;
   margin-right: auto;

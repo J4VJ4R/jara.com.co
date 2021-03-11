@@ -44,32 +44,16 @@
 }
 
 .img-box {
-  width: 50%;
   text-align: center;
-  padding: 3rem;
-  margin: 0 auto;
-
-  &__img {
-    width: 100%;
-  }
-
-  @include breakpoint(md-up) {
-    width: 50%;
-  }
-
-  @include breakpoint(sm-up) {
-    width: 25%;
-  }
 
   @include breakpoint(xxs-down) {
     padding: 0;
+    text-align: initial;
   }
 
 }
 
 .img-box__img--width {
-  height: to-rem(550);
-  width: to-rem(502);
 
   @include breakpoint(xs-down) {
     width: 19.375rem;
@@ -91,15 +75,71 @@
 }
 
 .text-box--width {
-  width: 41.6%;
 
   @include breakpoint(xxs-down) {
     width: 100%;
     padding: 0;
   }
 }
-
-.img-box--width {
-  width: 58.4%;
-
+.get-deals{
+  display: flex;
+  align-items: center;
+  @include breakpoint(md-down){
+    padding-top: 2rem;
+  }
+  &__img{
+    padding: to-rem(32) 0;
+    @include breakpoint(md-down){
+      width: 30%;
+      padding-right: 1rem;
+    }
+    @include breakpoint(xs-down){
+      display: none;
+    }
+  }
+  &__text{
+    padding-right: to-rem(146);
+    @include breakpoint(md-down){
+      padding-left: 1rem;
+      padding-right: 0;
+    }
+    @include breakpoint(xxs-down){
+      padding-right: 0;
+    }
+  }
+  &__title{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    @include breakpoint(xxs-down){
+      text-align: center;
+      font-size: 24px;
+    }
+    &-input{
+      position: relative;
+      width: 200%;
+    }
+  }
+  &__description{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    &-input{
+      position: relative;
+    }
+  }
+}
+.get-deals__description--center-on-mobile{
+  @include breakpoint(xxs-down){
+    padding-right: 1rem;
+    text-align: justify;
+  }
+}
+.get-deals__title--center{
+  @include breakpoint(xxs-down){
+    padding: 1rem 1rem 0;
+    line-height: 2.5rem;
+  }
 }
