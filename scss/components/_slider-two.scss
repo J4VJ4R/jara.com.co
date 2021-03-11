@@ -183,7 +183,9 @@
 }
 
 .text-box__description--hidden-on-mobile {
-  display: none;
+  @include breakpoint(xxs-down){
+    display: none;
+  }
 }
 
 .text-box__title--on-desktop {
