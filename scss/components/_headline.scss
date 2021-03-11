@@ -1,0 +1,105 @@
+.headline {
+  background-color: $color-seven;
+
+  &__container {
+    max-width: to-rem(1200);
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  &__girl {
+    text-align: center;
+    padding: 0 3rem;
+    padding-top: 3rem;
+    padding-bottom: 0;
+    position: relative;
+
+    @include breakpoint(md-up) {
+      width: 50%;
+    }
+
+    @include breakpoint(xxs-down) {
+      padding: 0;
+    }
+  }
+
+  &__text-box {
+    padding: 0 2rem;
+
+    @include breakpoint(md-up) {
+      width: 50%;
+      padding-right: to-rem(65);
+    }
+  }
+
+  &__title {
+    font-size: 2.125rem;
+    margin: 0;
+    padding-top: 1rem;
+
+    @include breakpoint(md-up) {
+      padding: 0 to-rem(48);
+      font-size: to-rem(40);
+      font-weight: 800;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.5rem;
+    padding-bottom: 1.2rem;
+
+    @include breakpoint(md-up) {
+      font-size: to-rem(18);
+      font-weight: 400;
+      margin-top: 0;
+      padding: 2rem 3rem;
+      line-height: 2rem;
+    }
+  }
+
+  &__img {
+    @include breakpoint(md-up) {
+      position: relative;
+      z-index: 400;
+      margin-bottom: -0.5rem;
+    }
+
+    @include breakpoint(xs-down) {
+      display: none;
+    }
+  }
+
+  &__half-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include breakpoint(md-down) {
+      display: none;
+    }
+  }
+
+  @include breakpoint(sm-up) {
+    align-items: center;
+    display: flex;
+  }
+
+}
+
+.headline__half-circle--left {
+  top: to-rem(-100);
+}
+
+.headline__half-circle--right {
+  top: to-rem(-100);
+  left: to-rem(114);
+}
+
+.headline__half-circle--down {
+  padding-bottom: 3rem;
+  left: 40px;
+  top: 26%;
+  z-index: 0;
+}

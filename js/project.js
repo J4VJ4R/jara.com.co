@@ -8,7 +8,86 @@ menu.addEventListener('click', () => {
 
 //show menu header white with tab
 $(document).ready(function () {
-  $('.brand__menu-on').click(function () {
+  $('.js-brand-menu-on').click(function () {
     headerMenuMobile.toggleClass('header__section--light');
   });
+});
+
+//slider one
+let slider = document.querySelector(".js-slider-content")
+let sliderIndividual = document.querySelectorAll(".js-content-slider-one")
+let counter = 1;
+let width = sliderIndividual[0].clientWidth;
+let intervalo = 3000;
+
+window.addEventListener("resize", function () {
+  width = sliderIndividual[0].clientWidth;
+})
+setInterval(function () {
+  slides();
+}, intervalo);
+
+function slides() {
+  slider.style.transform = "translate(" + (-width * counter) + "px)";
+  slider.style.transition = "transform .7s";
+  counter++;
+
+  if (counter == sliderIndividual.length) {
+    setTimeout(function () {
+      slider.style.transform = "translate(0px)";
+      slider.style.transition = "transform .7s";
+      counter = 1;
+    }, 1500)
+  }
+}
+
+//slider two with jquery
+$(document).ready(function () {
+  let imgItems = $('.js-slider section').length;
+  let imgPos = 1;
+
+  for (i = 1; i <= imgItems; i++) {
+    $('.js-pagination').append('<li class="pagination__item"><span class="icon-circle"></span></li>');
+  }
+  $('.js-slider .js-content-slider').hide();
+  $('.js-slider .js-content-slider:first').show();
+  $('.js-pagination li:first').css({
+    'color': '#2ec5ce'
+  });
+
+  //FUNCTIONS ********************************************
+
+  $('.js-pagination li').click(pagination);
+  setInterval(function () {
+    nextSlider();
+  }, 3000);
+
+  function pagination() {
+    let = paginationPosition = $(this).index() + 1;
+    $('.js-slider .js-content-slider').hide();
+    $('.js-slider .js-content-slider:nth-child(' + paginationPosition + ')').fadeIn();
+
+    $('.js-pagination li').css({
+      'color': '#2ec5ce'
+    });
+    $(this).css({
+      'color': 'white'
+    });
+  }
+
+  function nextSlider() {
+    if (imgPos >= imgItems) {
+      imgPos = 1;
+    } else {
+      imgPos++;
+    }
+    $('.js-slider .js-content-slider').hide();
+    $('.js-slider .js-content-slider:nth-child(' + imgPos + ')').fadeIn();
+    $('.js-pagination li').css({
+      'color': '#2ec5ce'
+    });
+    $('.js-pagination li:nth-child(' + imgPos + ')').css({
+      'color': 'white'
+    });
+  }
 });

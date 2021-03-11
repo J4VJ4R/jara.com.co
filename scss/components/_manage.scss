@@ -1,0 +1,85 @@
+.container-turquoise {
+  background-color: $color-two;
+
+}
+
+.from-mobile {
+  padding: 2rem;
+
+  &__title {
+    font-size: 2.125rem;
+    margin-top: 0;
+
+    @include breakpoint(md-up) {
+      font-size: to-rem(48);
+      font-weight: 800;
+      margin-bottom: 0;
+    }
+  }
+
+  &__description {
+    line-height: 1.5rem;
+    font-size: to-rem(14);
+    font-weight: 400;
+
+    @include breakpoint(md-up) {
+      font-size: to-rem(18);
+      margin-top: 0;
+      padding-top: to-rem(9);
+      line-height: to-rem(32);
+      margin-right: to-rem(74);
+    }
+  }
+
+  &__title-stores {
+    padding-bottom: to-rem(8);
+    margin-bottom: 0;
+    font-size: to-rem(14);
+    font-weight: 500;
+    line-height: 1.5rem;
+
+    @include breakpoint(md-up) {
+      padding-top: 3rem;
+      margin-top: 0;
+      font-size: to-rem(18);
+    }
+  }
+
+  @include breakpoint(md-up) {
+    width: 50%;
+    padding: 1rem;
+  }
+}
+
+.smartphones {
+  &__img-2 {
+    position: relative;
+  }
+
+  &__img-phone-1 {
+    margin-right: -2rem;
+  }
+
+  &__img-phone-2 {
+    position: absolute;
+    bottom: 0;
+  }
+
+  @include breakpoint(md-down) {
+    display: none;
+  }
+
+  @include breakpoint(md-up) {
+    width: 50%;
+    display: flex;
+    height: 100%;
+  }
+}
+
+.get-the-app {
+  @include breakpoint(md-up) {
+    display: flex;
+    align-items: center;
+    height: to-rem(491);
+  }
+}

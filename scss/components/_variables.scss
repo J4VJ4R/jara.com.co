@@ -5,6 +5,10 @@ $color-trhee:#FE9A22;
 $color-four: #F22BB2;
 $color-five: #0B0D17;
 $white: #ffffff;
+$color-trhee-opacity: #FFC278;
+$color-six: #F4F5F7;
+$color-seven: #F9FAFC;
+$gray: #EEEFF4;
 //font weight
 $font__weight--thin: 100;
 $font__weight--extra-light: 200;
@@ -15,43 +19,58 @@ $font__weight--semi-bold: 600;
 $font__weight--bold: 700;
 $font__weight--extra-bold: 800;
 $font__weight--ultra-bold: 900;
+
 //mixings for responsive
 @mixin breakpoint($class) {
 
-  @if $class == xxs-down {
-   @media (max-width: 576px) { @content; }
- }
- 
- @if $class == xxs-up {
-   @media (min-width: 577px) { @content; }
- }
+  @if $class==xxs-down {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
 
- @if $class == xs-down {
-   @media (max-width: 767px) { @content; }
- }
+  @if $class==xxs-up {
+    @media (min-width: 577px) {
+      @content;
+    }
+  }
 
- @else if $class == sm-up {
-   @media (min-width: 768px) { @content; }
- }
+  @if $class==xs-down {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
 
- @else if $class == md-down {
-   @media (max-width: 992px) { @content; }
- }
+  @else if $class==sm-up {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
 
- @else if $class == md-up {
-   @media (min-width: 993px) { @content; }
- }
+  @else if $class==md-down {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
 
- @else if $class == lg-up
-  {
-   @media (min-width: 1200px) { @content; }
- }
+  @else if $class==md-up {
+    @media (min-width: 993px) {
+      @content;
+    }
+  }
 
- @else {
-   @warn "Breakpoint mixin supports: xs, sm, md, lg";
- }
+  @else if $class==lg-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
 }
+
 //functions
-@function to-rem($value: 2rem){
+@function to-rem($value: 2rem) {
   @return ($value / 16 * 1rem);
 }
