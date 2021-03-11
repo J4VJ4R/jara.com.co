@@ -3,7 +3,56 @@
   z-index: 100;
   width: 100%;
   display: flex;
-
+  &__button-save{
+    text-align: center;
+    &-link{
+      border: none;
+      border-radius: 0.5rem;
+      background-color: $color-trhee;
+      padding: 1rem 2.5625rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      position: fixed;
+      top: 5rem;
+      z-index: 903;
+    }
+  }
+  &__orange-circle{
+    position: absolute;
+    top: to-rem(361);
+    right: to-rem(461);
+    z-index: 900;
+    @include breakpoint(md-down){
+      display: none;
+    }
+  }
+  &__img-girl{
+    position: absolute;
+    top: to-rem(146.5);
+    right: to-rem(-35.24);
+    z-index: 901;
+    @include breakpoint(md-down){
+      display: none;
+    }
+  }
+  &__purple-circle{
+    position: absolute;
+    top: to-rem(-172);
+    right: to-rem(-295);
+    @include breakpoint(md-down){
+      display: none;
+    }
+  }
+  &__turquoise-circle{
+    position: absolute;
+    top: to-rem(617);
+    right: to-rem(161);
+    @include breakpoint(md-down){
+      display: none;
+    }
+  }
   @include breakpoint(md-down) {
     width: 100%;
     margin: 0 auto;
@@ -18,31 +67,49 @@
 .text-box {
   font-weight: 400;
   text-align: center;
-  padding: to-rem(32);
-
+  @include breakpoint(md-down){
+    width: 100%;
+  }
   &__title {
+    margin: 0;
+    &-inputBox1{
+      position: relative;
+      z-index: 902;
+    }
     @include breakpoint(sm-up) {
       font-size: to-rem(72);
     }
-
     font-weight: $font__weight--bold;
   }
 
   &__description {
     line-height: to-rem(32);
     font-size: to-rem(14);
+    @include breakpoint(md-down){
+      line-height: 2.4rem;
+      padding-bottom: 2rem;
+      margin: 0 auto;
+    }
+    &-input2Box2{
+      width: 100%;
+      line-height: to-rem(32);
+      font-size: to-rem(14);
+      position: relative;
+      z-index: 902;
+    }
   }
 
-  @include breakpoint(sm-up) {
-    padding: 0;
-    padding-left: 0.8125rem;
+  @include breakpoint(md-up) {
+    padding-right: to-rem(570);
+    padding-top: to-rem(212);
+    padding-bottom: to-rem(200);
     text-align: left;
     box-sizing: content-box;
-    width: 45%;
 
     &__description {
       line-height: to-rem(32);
       font-size: to-rem(18);
+      margin-bottom: to-rem(48);
     }
   }
 
@@ -57,120 +124,13 @@
 
 .button {
   border: none;
-  border-radius: to-rem(32);
-  margin: 0 auto;
-  text-align: center;
+  border-radius: to-rem(8);
   background-color: $color-one;
-  padding: to-rem(6) to-rem(13);
-  line-height: to-rem(20);
-
-  &__link {
-    font-size: to-rem(12);
-    font-weight: 700;
-    text-decoration: none;
-    color: white;
-  }
-}
-
-.button--large {
-  @include breakpoint(md-up) {
-    float: left;
-    align-items: center;
-    display: flex;
-    width: to-rem(196);
-    height: to-rem(62);
-    border-radius: 8px;
-  }
-}
-
-.button__link--large {
-  @include breakpoint(md-up) {
-    width: 100%;
-    font-size: to-rem(20);
-  }
-}
-
-//img on banner about girl with computer
-.bubble-img {
-  z-index: 300;
-  right: -44px;
-  position: relative;
-  width: 50%;
-
-  &__img {
-
-    @include breakpoint(md-down) {
-      width: 76%;
-      height: 54%;
-      padding-top: 6rem;
-    }
-
-    @include breakpoint(xs-down) {
-      display: none;
-    }
-  }
-
-  &:after {
-    left: to-rem(-7.08);
-    z-index: -1;
-    top: to-rem(214);
-    content: "";
-    height: to-rem(72);
-    width: to-rem(72);
-    border-radius: 100%;
-    position: absolute;
-    background-color: $color-trhee-opacity;
-    visibility: visible;
-
-    @include breakpoint(md-down) {
-      top: 62%;
-    }
-
-    @include breakpoint(xs-down) {
-      display: none;
-    }
-  }
-
-  @include breakpoint(xs-down) {
-    display: none;
-  }
-
-  @include breakpoint(md-down) {
-    right: 0;
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
-.purple-circle {
-  position: relative;
-  display: contents;
-  width: 50%;
-
-  &__img {
-    width: 750px;
-    position: absolute;
-    top: -20.25rem;
-    right: -16.125rem;
-
-    @include breakpoint(md-down) {
-      display: none;
-    }
-  }
-}
-
-.turquoise-circle {
-  &__img {
-    top: 92%;
-    z-index: 300;
-    position: relative;
-    right: to-rem(-44);
-    right: 14.6rem;
-
-    @include breakpoint(xs-down) {
-      display: none;
-    }
-  }
+  padding: to-rem(16) to-rem(41);
+  font-size: to-rem(20);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
 }
 
 .container--height {
@@ -181,11 +141,34 @@
   @include breakpoint(md-down) {
     height: 38.75rem;
   }
-  @include breakpoint(xs-down){
+
+  @include breakpoint(xs-down) {
     height: 16.75rem;
   }
 }
 
 .container-fluid--relative {
   position: relative;
+}
+
+.container-banner {
+  max-width: to-rem(1110);
+  width: 100%;
+  margin: 0 auto;
+}
+.button--save{
+  justify-content: center;
+  position: absolute;
+  top: 5rem;
+  position: fixed;
+  z-index: 900;
+  display: flex;
+  width: 5%;
+  right: 1rem;
+  background-color: $color-trhee;
+}
+.border-box{
+  border: 1px solid rgb(3, 0, 0);
+  background-color: rgba(128, 128, 128, 0.555);
+  border-radius: 10px;
 }

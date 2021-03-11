@@ -10,6 +10,11 @@
 
   .img-box--small {
     width: 100%;
+    @include breakpoint(xs-down){
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
   }
 
 }
@@ -25,6 +30,7 @@
 
   @include breakpoint(xs-down) {
     width: 82%;
+    margin: 0 auto;
   }
 }
 
@@ -62,11 +68,13 @@
 
 .img-box--padding {
   padding-bottom: 0.4rem;
-
+  @include breakpoint(md-down){
+    margin: 0 auto;
+  }
   @include breakpoint(sm-up) {
     padding: 0;
     width: to-rem(255);
-    height: to-rem(204);
+    
   }
 }
 
@@ -111,14 +119,16 @@
 .text-box__description--mobile {
   @include breakpoint(xs-down) {
     padding-left: 0;
-    width: 100%;
+    // width: 100%;
     padding-top: .5rem;
+    text-align: center;
   }
 }
 
 .text-box--padding-on-mobile {
   @include breakpoint(xs-down) {
-    padding-left: 1rem;
+    // padding-left: 1rem;
+    text-align: center;
   }
 }
 
@@ -129,7 +139,7 @@
 }
 
 .text-box--mobile {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .text-box__title--on-mobile {
@@ -140,5 +150,31 @@
 .banner--responsive{
   @include breakpoint(md-down){
     width: 70%;
+  }
+}
+.text-box__title--center-mobile{
+  @include breakpoint(md-down){
+    padding-left: 1rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  @include breakpoint(xxs-down){
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1rem;
+  }
+}
+.content-slider-one{
+  &__img{
+    width: 100%;
+    padding: 0 1rem;
+  }
+  &__text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 1rem;
   }
 }

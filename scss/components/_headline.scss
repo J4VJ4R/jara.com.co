@@ -63,7 +63,7 @@
     @include breakpoint(md-up) {
       position: relative;
       z-index: 400;
-      margin-bottom: -0.5rem;
+      margin-bottom: -0.2rem;
     }
 
     @include breakpoint(xs-down) {

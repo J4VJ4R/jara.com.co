@@ -6,10 +6,10 @@
   display: flex;
   color: #ffffff;
   flex-wrap: wrap;
-
+  
   @include breakpoint(md-up) {
-    padding-bottom: to-rem(64);
-    padding-top: to-rem(64);
+    padding-bottom: to-rem(32);
+    padding-top: to-rem(32);
   }
 }
 
@@ -30,7 +30,6 @@
     line-height: 1.5rem;
 
     @include breakpoint(md-up) {
-      line-height: to-rem(24);
       line-height: 2.5rem;
     }
   }
