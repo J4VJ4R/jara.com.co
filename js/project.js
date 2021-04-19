@@ -132,7 +132,6 @@ function buttonSave() {
   });
 
 }
-//function to save data on localstorage
 $('#js-button').on("click", function () {
 
   Array.from(foo).forEach(function (test) {

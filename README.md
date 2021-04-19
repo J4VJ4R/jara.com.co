@@ -12,7 +12,7 @@
 - [Resources](#resources)
 - [Learning Objetives](#learning-objectives)
 - [Tecnologies](#technologies)
-- [Preview here]()
+- [Preview here](https://landify2.herokuapp.com/)
 
 ### Description ⌨️
 
