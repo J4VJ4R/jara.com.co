@@ -9,6 +9,9 @@ $color-trhee-opacity: #FFC278;
 $color-six: #F4F5F7;
 $color-seven: #F9FAFC;
 $gray: #EEEFF4;
+$secondary: #071629;
+$bg-menu-mobile: #9797974d;
+
 //font weight
 $font__weight--thin: 100;
 $font__weight--extra-light: 200;
@@ -73,4 +76,19 @@ $font__weight--ultra-bold: 900;
 //functions
 @function to-rem($value: 2rem) {
   @return ($value / 16 * 1rem);
+}
+//mixin to responsive design
+@mixin display($size) {
+  @if $size == mobile {
+    @media (max-width: 576px) { @content; }
+  }@else if $size == tablet-small-down {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $size == tablet-medium-up {
+    @media (min-width: 992px) { @content; }
+  }@else if $size == tablet-medium-down {
+    @media (max-width: 992px) { @content; }
+  }@else if $size == desktop-down {
+    @media (max-width: 1280px) { @content; }
+  }
 }

@@ -18,6 +18,10 @@
     font-weight: $font__weight--bold;
     color: $color-five;
     text-decoration: none;
+    padding: 1rem 0;
+    &:hover{
+      color: #2EC5CE;
+    }
   }
   &__link-logo{
     padding: to-rem(20.67) 0;
@@ -29,7 +33,8 @@
     @include breakpoint(xs-down) {
       display: none;
     }
-
+    border-bottom: solid 2px $color-trhee;
+    margin-right: 1rem;
     width: 33.3%;
     list-style: none;
   }
@@ -207,6 +212,7 @@
           text-align: center;
           display: block;
           line-height: 3rem;
+          
         }
 
         width: 33.3%;
@@ -263,6 +269,11 @@
 
 .social-media__icon {
   background: #f9fafc1c;
+  border-radius: 100%;
+  padding: .5rem;
+}
+.social-media__icon--turquoise {
+  background: $color-two;
   border-radius: 100%;
   padding: .5rem;
 }

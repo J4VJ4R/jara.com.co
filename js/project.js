@@ -4,15 +4,15 @@ let i = 0;
 let foo = document.querySelectorAll('.js-editable');
 let testarr = [];
 
-// show values on new fields
-let foo2 = localStorage.getItem('key951');
-foo2 = JSON.parse(foo2);
-if (foo2) {
-  Array.from(foo).forEach(function (test) {
-    test.innerHTML = foo2[i];
-    i++;
-  });
-}
+// // show values on new fields
+// let foo2 = localStorage.getItem('key951');
+// foo2 = JSON.parse(foo2);
+// if (foo2) {
+//   Array.from(foo).forEach(function (test) {
+//     test.innerHTML = foo2[i];
+//     i++;
+//   });
+// }
 //event click change to x the menu hamburguer
 menu.addEventListener('click', () => {
   menu.classList.toggle('active')
@@ -30,7 +30,7 @@ let slider = document.querySelector(".js-slider-content")
 let sliderIndividual = document.querySelectorAll(".js-content-slider-one")
 let counter = 1;
 let width = sliderIndividual[0].clientWidth;
-let intervalo = 3000;
+let intervalo = 6000;
 
 window.addEventListener("resize", function () {
   width = sliderIndividual[0].clientWidth;
@@ -114,33 +114,33 @@ function getLocalStorage() {
   }
 }
 
-hotkeys('ctrl+k', function (event, handler) {
-  switch (handler.key) {
-    case 'ctrl+k':
-      buttonSave();
-      break;
-    default:
-      alert(event);
-  }
-});
+// hotkeys('ctrl+k', function (event, handler) {
+//   switch (handler.key) {
+//     case 'ctrl+k':
+//       buttonSave();
+//       break;
+//     default:
+//       alert(event);
+//   }
+// });
 //function to create array of data
-function buttonSave() {
-  document.getElementById("js-button").style.display = "block";
-  Array.from(foo).forEach(function (test) {
-    test.contentEditable = true;
-    $('.js-editable').addClass('border-box')
-  });
+// function buttonSave() {
+//   document.getElementById("js-button").style.display = "block";
+//   Array.from(foo).forEach(function (test) {
+//     test.contentEditable = true;
+//     $('.js-editable').addClass('border-box')
+//   });
 
-}
-$('#js-button').on("click", function () {
+// }
+// $('#js-button').on("click", function () {
 
-  Array.from(foo).forEach(function (test) {
-    testarr.push(test.textContent)
-  });
-  testarr.forEach(function () {
-    localStorage.setItem('key951', JSON.stringify(testarr));
-  })
-  document.getElementById("js-button").style.display = "none";
-  location.reload();
+//   Array.from(foo).forEach(function (test) {
+//     testarr.push(test.textContent)
+//   });
+//   testarr.forEach(function () {
+//     localStorage.setItem('key951', JSON.stringify(testarr));
+//   })
+//   document.getElementById("js-button").style.display = "none";
+//   location.reload();
 
-})
+// })

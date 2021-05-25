@@ -173,6 +173,7 @@
 
 .img-box--padding-slider {
   padding-bottom: 0;
+  margin-top: 2rem;
   @include breakpoint(xxs-down){
     text-align: center;
   }
@@ -220,4 +221,10 @@
   @include breakpoint(xxs-down){
     // text-align: center;
   }
+}
+.img-circle{
+  border-radius: 100px;
+}
+.img-box-lasles{
+  border-radius: 20px;
 }
