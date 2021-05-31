@@ -73,12 +73,12 @@
    <!-- CONTACT US SECTION -->
    <div class="container contact-us contact-us-width">
     <div class="row">
-        <form action=""  class="contact-inputs text-left mr-1 ml-1 text-center">
+        <form action="FormToEmail.php" method="POST"  class="contact-inputs text-left mr-1 ml-1 text-center">
             <h3 class="title-conctact-us">Contáctanos</h3>
-                <input type="text" placeholder="Nombre" class="group-imputs-contacts">
-                <input type="email" placeholder="Correo" class="group-imputs-contacts">
-                <input type="text" placeholder="Tu mensaje" class="group-imputs-contacts">
-            <button class="btn-contact">Enviar</button>
+                <input type="text" placeholder="Nombre" name="name" class="group-imputs-contacts">
+                <input type="email" placeholder="Correo" name="email" class="group-imputs-contacts">
+                <input type="text" placeholder="Tu mensaje" name="comments" class="group-imputs-contacts">
+            <button type="submit" class="btn-contact" name="registrarse" place>Enviar</button>
         </form>
     </div>
 </div>
