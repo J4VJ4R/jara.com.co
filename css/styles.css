@@ -420,6 +420,9 @@ body {
   background-color: rgba(128, 128, 128, 0.555);
   border-radius: 10px; }
 
+.banner--padding {
+  padding-top: 10.25rem; }
+
 .text-box__title--medium {
   font-size: 3rem; }
   @media (max-width: 767px) {
